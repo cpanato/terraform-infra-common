@@ -20,12 +20,12 @@ import (
 	"github.com/go-git/go-git/v5/plumbing"
 	"github.com/go-git/go-git/v5/plumbing/transport"
 	gitHttp "github.com/go-git/go-git/v5/plumbing/transport/http"
+	"github.com/google/go-github/v74/github"
 	"github.com/snabb/httpreaderat"
+	"golang.org/x/oauth2"
 
 	"chainguard.dev/sdk/octosts"
 	"github.com/chainguard-dev/clog"
-	"github.com/google/go-github/v72/github"
-	"golang.org/x/oauth2"
 )
 
 // NewGitHubClient creates a new GitHub client, using a new token from OctoSTS,

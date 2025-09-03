@@ -6,14 +6,16 @@ import (
 	"net/http"
 	"runtime/debug"
 
+	cloudevents "github.com/cloudevents/sdk-go/v2"
+	"github.com/google/go-github/v74/github"
+	"github.com/sethvargo/go-envconfig"
+
 	"github.com/chainguard-dev/clog"
 	_ "github.com/chainguard-dev/clog/gcp/init" // enable GCP logging
+
 	"github.com/chainguard-dev/terraform-infra-common/modules/github-events/schemas"
 	"github.com/chainguard-dev/terraform-infra-common/pkg/httpmetrics"
 	mce "github.com/chainguard-dev/terraform-infra-common/pkg/httpmetrics/cloudevents"
-	cloudevents "github.com/cloudevents/sdk-go/v2"
-	"github.com/google/go-github/v72/github"
-	"github.com/sethvargo/go-envconfig"
 )
 
 // Define a type for keys used in context to prevent key collisions.

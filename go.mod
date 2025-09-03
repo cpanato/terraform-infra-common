@@ -2,6 +2,9 @@ module github.com/chainguard-dev/terraform-infra-common
 
 go 1.24.6
 
+// remove this once https://github.com/google/go-github/pull/3694 is merged and relased
+replace github.com/google/go-github/v74 => github.com/cpanato/go-github/v74 v74.0.0-20250820130654-547953f49018
+
 require (
 	chainguard.dev/go-grpc-kit v0.17.14
 	chainguard.dev/sdk v0.1.41
@@ -19,6 +22,7 @@ require (
 	github.com/go-git/go-git/v5 v5.16.2
 	github.com/google/go-cmp v0.7.0
 	github.com/google/go-github/v72 v72.0.0
+	github.com/google/go-github/v74 v74.0.0-00010101000000-000000000000
 	github.com/jonboulle/clockwork v0.5.0
 	github.com/mileusna/useragent v1.3.5
 	github.com/prometheus/client_golang v1.23.0
